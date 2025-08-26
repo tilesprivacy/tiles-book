@@ -1,15 +1,21 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import { Logo } from './components/logo'
 
 const config: DocsThemeConfig = {
-  logo: <span>Tilekit</span>,
+  logo: (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <Logo width={24} height={24} />
+      <span>Tilekit</span>
+    </div>
+  ),
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/tileslauncher',
   },
   chat: {
-    link: 'https://discord.com',
+    link: 'https://go.tiles.run/discord',
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/tileslauncher',
   footer: {
     text: 'Tilekit',
   },
