@@ -1,5 +1,5 @@
 {
-  "index": "Introduction",
+  "index": "Tilekit",
   "another": "Another Page",
   "advanced": "Advanced (A Folder)",
   "about": {
@@ -7,9 +7,9 @@
     "type": "page"
   },
   "contact": {
-    "title": "Contact ↗",
+    "title": "Tiles Launcher ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://tiles.run/",
     "newWindow": true
   }
 }

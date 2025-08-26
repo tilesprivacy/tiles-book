@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "tilekit",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "Monorepo hosting both in-house and vendored libraries and tools powering the Tiles Launcher.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
