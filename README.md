@@ -1,10 +1,8 @@
 # Tilekit
 
-This monorepo contains both in-house and third-party libraries and tools that power the Tiles Launcher.
+This toolchain is built with Swift and works as both a CLI and a library. Precompiled binaries are available for Windows, macOS, and Linux, covering both stable releases and nightly builds generated via GitHub Actions.
 
-To download toolchains from tiles.run, use the Tilekit toolchain installer. Tiles.run toolchains support Modelfile SDK, include features like p2p distributed inference and experimental support for training multi-turn agents.
-
-The design of this toolkit is inspired by ```git/gh```, and ```workerd``` CLIs.
+The design of this toolchain is inspired by `git/gh`, `duckdb` and `workerd`.
 
 ## Quick Start
 
