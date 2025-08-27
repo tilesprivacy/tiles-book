@@ -1,6 +1,8 @@
 # Tilekit
 
-Monorepo hosting both in-house and vendored libraries and tools powering the Tiles Launcher.
+This monorepo contains both in-house and third-party libraries and tools that power the Tiles Launcher.
+
+To download toolchains from tiles.run, use the Tilekit toolchain installer. Tiles.run toolchains support Modelfile SDK, include features like p2p distributed inference and experimental support for training multi-turn agents.
 
 ## Quick Start
 
