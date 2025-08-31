@@ -2,7 +2,7 @@
 
 This toolchain is built with Swift and works as both a CLI and a library. Precompiled binaries are available for Windows, macOS, and Linux, covering both stable releases and nightly builds generated via GitHub Actions.
 
-The design of this toolchain is inspired by `git/gh`, `duckdb` and `workerd`.
+The design of this toolchain is inspired by `git/gh`, `duckdb`, `keybase` and `workerd`.
 
 ## Quick Start
 
