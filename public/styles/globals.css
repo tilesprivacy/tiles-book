@@ -1,0 +1,52 @@
+/* Custom dark theme background color */
+html[data-theme="dark"] {
+  --nextra-bg: #0D1116;
+  --nextra-bg-code: #0D1116;
+  --nextra-bg-primary: #0D1116;
+}
+
+html[data-theme="dark"] body {
+  background-color: #0D1116 !important;
+}
+
+html[data-theme="dark"] #__next {
+  background-color: #0D1116 !important;
+}
+
+html[data-theme="dark"] .nx-bg-white {
+  background-color: #0D1116 !important;
+}
+
+html[data-theme="dark"] .nx-bg-gray-50 {
+  background-color: #0D1116 !important;
+}
+
+html[data-theme="dark"] .nx-bg-gray-100 {
+  background-color: #0D1116 !important;
+}
+
+html[data-theme="dark"] .nx-bg-primary-50 {
+  background-color: #0D1116 !important;
+}
+
+html[data-theme="dark"] .nx-bg-primary-100 {
+  background-color: #0D1116 !important;
+}
+
+/* Target main content areas */
+html[data-theme="dark"] main {
+  background-color: #0D1116 !important;
+}
+
+html[data-theme="dark"] .nx-container {
+  background-color: #0D1116 !important;
+}
+
+/* Target sidebar and navigation */
+html[data-theme="dark"] .nx-sidebar-container {
+  background-color: #0D1116 !important;
+}
+
+html[data-theme="dark"] .nx-nav-container {
+  background-color: #0D1116 !important;
+}

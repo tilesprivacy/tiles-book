@@ -20,6 +20,20 @@ const config: DocsThemeConfig = {
     text: 'Tilekit',
   },
   // OpenGraph configuration
+  // Custom theme colors
+  primaryHue: {
+    dark: 0, // Black (0 degrees = black)
+    light: 0, // Black (0 degrees = black)
+  },
+  primarySaturation: {
+    dark: 0, // 0% saturation for pure black/white
+    light: 0, // 0% saturation for pure black/white
+  },
+  // Custom theme provider for OpenGraph
+  components: {
+    // This will be handled by our custom _app.tsx
+  },
+  // OpenGraph configuration
   head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,19 +50,6 @@ const config: DocsThemeConfig = {
       <link rel="manifest" href="/site.webmanifest" />
     </>
   ),
-  // Custom theme colors
-  primaryHue: {
-    dark: 0, // Black (0 degrees = black)
-    light: 0, // Black (0 degrees = black)
-  },
-  primarySaturation: {
-    dark: 0, // 0% saturation for pure black/white
-    light: 0, // 0% saturation for pure black/white
-  },
-  // Custom theme provider for OpenGraph
-  components: {
-    // This will be handled by our custom _app.tsx
-  },
 }
 
 export default config
