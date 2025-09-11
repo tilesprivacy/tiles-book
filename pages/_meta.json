@@ -3,7 +3,7 @@
   "another": "Another Page",
   "advanced": "Advanced (A Folder)",
   "contact": {
-    "title": "Tiles Launcher ↗",
+    "title": "Tiles ↗",
     "type": "page",
     "href": "https://tiles.run/",
     "newWindow": true
