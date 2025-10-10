@@ -12,19 +12,21 @@ export const Logo: React.FC<LogoProps> = ({
   className = '' 
 }) => {
   return (
-    <svg 
-      width={width} 
-      height={height} 
-      viewBox="0 0 28 28" 
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      style={{
-        '--logo-fill': 'var(--tw-prose-body)',
-      } as React.CSSProperties}
-    >
-      <rect x="0" y="0" width="12" height="12" fill="currentColor" rx="4" ry="4" />
-      <rect x="16" y="0" width="12" height="12" fill="currentColor" rx="4" ry="4" />
-      <rect x="0" y="16" width="12" height="12" fill="currentColor" rx="4" ry="4" />
-    </svg>
+    <div className={className} style={{ width, height }}>
+      <img 
+        src="/light.svg" 
+        alt="Tilekit Logo" 
+        width={width} 
+        height={height}
+        className="logo-light"
+      />
+      <img 
+        src="/dark.svg" 
+        alt="Tilekit Logo" 
+        width={width} 
+        height={height}
+        className="logo-dark"
+      />
+    </div>
   )
 }

@@ -50,3 +50,20 @@ html[data-theme="dark"] .nx-sidebar-container {
 html[data-theme="dark"] .nx-nav-container {
   background-color: #0D1116 !important;
 }
+
+/* Logo theme switching */
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+html.dark .logo-light {
+  display: none;
+}
+
+html.dark .logo-dark {
+  display: block;
+}
