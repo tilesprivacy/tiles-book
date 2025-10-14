@@ -36,7 +36,7 @@ export default async function handler() {
           fontFamily: "system-ui, -apple-system, sans-serif",
         }}
       >
-        A Modelfile based decentralized version control system for model weights
+        Modelfile-based SDK that enables developers to customize open models and agent experiences.
       </div>
     </div>,
     {

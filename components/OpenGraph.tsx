@@ -15,8 +15,8 @@ interface OpenGraphProps {
 }
 
 export function OpenGraph({
-  title = 'Modelfile based declarative, cross-platform blueprint that allows developers to customize open models.',
-  description = 'Our goal is to evolve Modelfile in collaboration with the community and establish it as the standard for model customization.',
+  title = 'Tilekit is a declarative, cross-platform Modelfile-based SDK that enables developers to customize open models and agent experiences.',
+  description = "We're building the open source technology to make local-first personal models ubiquitous. Our goal is to evolve Modelfile in collaboration with the community and establish it as the standard for model customization.",
   type = 'website',
   url,
   image,
