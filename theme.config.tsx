@@ -15,7 +15,7 @@ const config: DocsThemeConfig = {
   chat: {
     link: 'https://go.tiles.run/discord',
   },
-  docsRepositoryBase: 'https://github.com/tileshq/tilekit',
+  docsRepositoryBase: 'https://github.com/tilesprivacy/tilekit',
   footer: {
     text: 'Tilekit',
   },
