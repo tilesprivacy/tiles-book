@@ -56,8 +56,7 @@ export function generateOpenGraphData(
   
   // Generate OG image URL
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tiles.run'
-  const ogImageUrl = frontmatter.image || 
-    `${baseUrl}/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&type=${type}`
+  const ogImageUrl = frontmatter.image || `${baseUrl}/og.png`
   
   return {
     title,

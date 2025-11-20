@@ -45,16 +45,22 @@ export function OpenGraph({
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tiles.run'
   const fullUrl = url ? `${baseUrl}${url}` : baseUrl
   
-  // Generate dynamic OpenGraph image using the API endpoint
-  const ogImageUrl = image || `${baseUrl}/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&type=${type}`
+  // Use static OpenGraph image
+  const ogImageUrl = image || `${baseUrl}/og.png`
+
+  // Remove "nextra" from all SEO text fields
+  const cleanTitle = removeNextra(title)
+  const cleanDocumentTitle = removeNextra(documentTitle || title)
+  const cleanDescription = removeNextra(description)
+  const cleanSiteName = removeNextra(siteName)
 
   // Structured Data (JSON-LD)
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': type === 'article' ? 'Article' : 'WebSite',
-    name: siteName,
-    headline: title,
-    description: description,
+    name: cleanSiteName,
+    headline: cleanTitle,
+    description: cleanDescription,
     url: fullUrl,
     image: ogImageUrl,
     publisher: {
@@ -72,8 +78,8 @@ export function OpenGraph({
   return (
     <Head>
       {/* Basic Meta Tags */}
-      <title>{documentTitle || title}</title>
-      <meta name="description" content={description} />
+      <title>{cleanDocumentTitle}</title>
+      <meta name="description" content={cleanDescription} />
       <meta name="keywords" content="Tilekit, Modelfile, Rust SDK, open models, AI models, model customization, agent experiences, Ollama, machine learning, LLM, fine-tuning" />
       <meta name="author" content="Tilekit" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -81,25 +87,25 @@ export function OpenGraph({
       <meta httpEquiv="content-language" content="en-US" />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:title" content={cleanTitle} />
+      <meta property="og:description" content={cleanDescription} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={ogImageUrl} />
       <meta property="og:image:width" content={imageWidth.toString()} />
       <meta property="og:image:height" content={imageHeight.toString()} />
-      <meta property="og:image:alt" content={title} />
-      <meta property="og:site_name" content={siteName} />
+      <meta property="og:image:alt" content={cleanTitle} />
+      <meta property="og:site_name" content={cleanSiteName} />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:creator" content={twitterCreator} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:title" content={cleanTitle} />
+      <meta name="twitter:description" content={cleanDescription} />
       <meta name="twitter:image" content={ogImageUrl} />
-      <meta name="twitter:image:alt" content={title} />
+      <meta name="twitter:image:alt" content={cleanTitle} />
       
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
