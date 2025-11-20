@@ -9,15 +9,15 @@ export default async function handler(request: Request) {
   const imageData = await imageResponse.arrayBuffer()
   const imageBase64 = Buffer.from(imageData).toString('base64')
   const imageDataUrl = `data:image/png;base64,${imageBase64}`
-  
+
   // Get query parameters if provided
   const { searchParams } = new URL(request.url)
   const title = searchParams.get('title') || 'Modelfile based SDK that lets developers customize open models and agent experiences'
   const description = searchParams.get('description') || 'Modelfile based SDK that lets developers customize open models and agent experiences'
-  
+
   // Use description if provided, otherwise use title, fallback to default
   const displayText = description || title || 'Modelfile based SDK that lets developers customize open models and agent experiences'
-  
+
   return new ImageResponse(
     <div
       style={{
@@ -44,22 +44,22 @@ export default async function handler(request: Request) {
           src={imageDataUrl}
           alt="Tilekit Logo"
           style={{
-            width: "200px",
-            height: "200px",
+            width: "220px",
+            height: "220px",
             objectFit: "contain",
           }}
         />
       </div>
-      
+
       {/* Text below the logo */}
       <div
         style={{
           color: "#ffffff",
-          fontSize: 28,
+          fontSize: 32,
           textAlign: "center",
-          maxWidth: 900,
-          lineHeight: 1.4,
-          fontFamily: "system-ui, -apple-system, sans-serif",
+          maxWidth: 950,
+          lineHeight: 1.5,
+          fontFamily: "Inter, system-ui, -apple-system, sans-serif",
         }}
       >
         {displayText}
