@@ -55,6 +55,13 @@ const config: DocsThemeConfig = {
       <link rel="manifest" href="/site.webmanifest" />
     </>
   ),
+  // Remove "- Nextra" suffix from titles
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s',
+      defaultTitle: 'Tilekit',
+    }
+  },
 }
 
 export default config
