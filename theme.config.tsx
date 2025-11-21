@@ -16,6 +16,18 @@ const config: DocsThemeConfig = {
     link: 'https://go.tiles.run/discord',
   },
   docsRepositoryBase: 'https://github.com/tilesprivacy/tilekit-docs',
+  editLink: {
+    component: ({ children, className }: { children: React.ReactNode; className?: string }) => (
+      <a
+        href="https://github.com/tilesprivacy/tilekit-docs/blob/main/pages/index.mdx"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {children}
+      </a>
+    ),
+  },
   footer: {
     text: 'Tilekit',
   },
