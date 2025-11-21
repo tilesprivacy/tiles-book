@@ -1,7 +1,6 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 import { Logo } from './components/logo'
-import { Navbar } from './components/navbar'
 
 const config: DocsThemeConfig = {
   logo: (
@@ -15,9 +14,6 @@ const config: DocsThemeConfig = {
   },
   chat: {
     link: 'https://go.tiles.run/discord',
-  },
-  navbar: {
-    component: Navbar,
   },
   docsRepositoryBase: 'https://github.com/tilesprivacy/tilekit-docs',
   editLink: {
@@ -33,7 +29,7 @@ const config: DocsThemeConfig = {
     ),
   },
   footer: {
-    text: '© 2025 Tiles Privacy',
+    text: 'Tilekit',
   },
   // OpenGraph configuration
   // Custom theme colors
