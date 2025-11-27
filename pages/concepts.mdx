@@ -2,6 +2,10 @@
 
 This document describes the Modelfile implementation in this Rust-based codebase. The implementation is based on the [Ollama Modelfile specification](https://github.com/ollama/ollama/blob/main/docs/modelfile.md). We are gradually adding support for the Modelfile specification in our Rust based implementation, and our goal is to evolve Modelfile in collaboration with the community and establish it as a standard for model customization.
 
+To begin with, we are collaborating with the [Darkshapes](https://darkshapes.org) team to support the [MIR](https://huggingface.co/darkshapes/MIR_) (Machine Intelligence Resource) model naming scheme in our FROM directive while maintaining full backward compatibility with the Ollama implementation. For model layering, we will use the open source implementation from Hugging Face in [xet-core](https://github.com/huggingface/xet-core).
+
+Our model
+
 ## Overview
 
 The Modelfile parser is implemented in `src/core/modelfile.rs` using the `nom` parser combinator library. It parses a text-based configuration format for defining model configurations, parameters, templates, and system prompts.
