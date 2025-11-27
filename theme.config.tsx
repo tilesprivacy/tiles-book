@@ -34,12 +34,12 @@ const config: DocsThemeConfig = {
   // OpenGraph configuration
   // Custom theme colors
   primaryHue: {
-    dark: 0, // Black (0 degrees = black)
-    light: 0, // Black (0 degrees = black)
+    dark: 357, // #A32026 red hue
+    light: 357, // #A32026 red hue
   },
   primarySaturation: {
-    dark: 0, // 0% saturation for pure black/white
-    light: 0, // 0% saturation for pure black/white
+    dark: 67, // 67% saturation for #A32026
+    light: 67, // 67% saturation for #A32026
   },
   // Custom theme provider for OpenGraph
   components: {
@@ -58,7 +58,7 @@ const config: DocsThemeConfig = {
       <meta property="og:locale" content="en_US" />
       <meta name="twitter:site" content="@tileslauncher" />
       <meta name="twitter:creator" content="@tileslauncher" />
-      <meta name="theme-color" content="#667eea" />
+      <meta name="theme-color" content="#A32026" />
       <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="shortcut icon" href="/favicon.ico" />
