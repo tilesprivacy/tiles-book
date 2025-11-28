@@ -1,8 +1,7 @@
 import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
 import { Logo } from './components/logo'
 
-const config: DocsThemeConfig = {
+const config = {
   logo: (
     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
       <Logo width={24} height={24} />
@@ -16,18 +15,15 @@ const config: DocsThemeConfig = {
     link: 'https://go.tiles.run/discord',
   },
   docsRepositoryBase: 'https://github.com/tilesprivacy/tilekit-docs',
-  editLink: {
-    component: ({ children, className }: { children: React.ReactNode; className?: string }) => (
-      <a
-        href="https://github.com/tilesprivacy/tilekit-docs/blob/main/pages/index.mdx"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={className}
-      >
-        {children}
-      </a>
-    ),
-  },
+  editLink: (
+    <a
+      href="https://github.com/tilesprivacy/tilekit-docs/blob/main/app/page.mdx"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Edit this page
+    </a>
+  ),
   footer: {
     text: '(C) 2025 Tiles Privacy',
   },
@@ -42,9 +38,6 @@ const config: DocsThemeConfig = {
     light: 67, // 67% saturation for #A32026
   },
   // Custom theme provider for OpenGraph
-  components: {
-    // This will be handled by our custom _app.tsx
-  },
   // OpenGraph configuration
   head: (
     <>

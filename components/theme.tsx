@@ -1,4 +1,4 @@
-import { useConfig } from 'nextra-theme-docs'
+import { useConfig } from '@nextra/theme-docs'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { OpenGraph } from './OpenGraph'
