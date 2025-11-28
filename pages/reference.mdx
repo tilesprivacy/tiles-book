@@ -151,10 +151,6 @@ Copied verbatim from: [github.com/darkshapes/MIR](https://github.com/darkshapes/
 
 The MIR classification format seeks to standardize and complete a hyperlinked network of model information, improving accessibility and reproducibility across the AI community.<br />
 
-The work is inspired by:
-- [AIR-URN](https://github.com/civitai/civitai/wiki/AIR-%E2%80%90-Uniform-Resource-Names-for-AI) project by [CivitAI](https://civitai.com/)
-- [Spandrel](https://github.com/chaiNNer-org/spandrel/blob/main/libs/spandrel/spandrel/__helpers/registry.py) library's super-resolution registry
-
 Example:
 
 > mir : model . transformer . clip-l : stable-diffusion-xl
@@ -265,7 +261,7 @@ Example: `tencent-hunyuan/hunyuandiT-v1.2-diffusers`<br />
 SERIES : `hunyuandit-v1`
 
 Example: `black-forest-labs/FLUX.1-dev`<br />
-SERIES : `flux1-dev`
+SERIES : `flux1dev`
 
 In regex (roughly):
 
@@ -283,3 +279,13 @@ Implementation details based on version-breaking changes, configuration inconsis
 ##### Rules
 
 An additional SERIES label for identifying cross-compatibility
+
+### Notes
+
+If you would like to regenerate or update the example file here, use [nnll](https://github.com/darkshapes/nnll/tree/0.1.dev799):
+
+MIR is inspired by:
+
+- [AIR-URN](https://github.com/civitai/civitai/wiki/AIR-%E2%80%90-Uniform-Resource-Names-for-AI) project by [CivitAI](https://civitai.com/)
+- [Spandrel](https://github.com/chaiNNer-org/spandrel/blob/main/libs/spandrel/spandrel/__helpers/registry.py) super-resolution registry by [chaiNNer](https://github.com/chaiNNer-org/chaiNNer)
+- [SDWebUI Model Toolkit](https://github.com/silveroxides/stable-diffusion-webui-model-toolkit-revisited) by [silveroxides](https://github.com/silveroxides)
