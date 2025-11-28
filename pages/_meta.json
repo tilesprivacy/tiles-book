@@ -3,6 +3,12 @@
   "proposal": "Proposal",
   "implementation": "Implementation",
   "reference": "Reference",
+  "blog": {
+    "title": "Blog",
+    "type": "page",
+    "href": "https://www.blog.tiles.run/",
+    "newWindow": true
+  },
   "contact": {
     "title": "Tiles ↗",
     "type": "page",

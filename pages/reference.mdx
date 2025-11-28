@@ -145,13 +145,11 @@ modelfile.build()?;
 
 ## MIR Reference
 
-Copied verbatim from: [darkshapes/MIR_/blob/main/README.md](https://huggingface.co/darkshapes/MIR_/blob/main/README.md):
+Copied verbatim from: [github.com/darkshapes/MIR](https://github.com/darkshapes/MIR):
 
-#
+> MIR (Machine Intelligence Resource)<br /><br />A naming schema for AIGC/ML work.
 
-> MIR (Machine Intelligence Resource)<br/><br/>A naming schema for AIGC/ML work.
-
-The MIR classification format seeks to standardize and complete a hyperlinked network of model information, improving accessibility and reproducibility across the AI community.<br/>
+The MIR classification format seeks to standardize and complete a hyperlinked network of model information, improving accessibility and reproducibility across the AI community.<br />
 The work is inspired by:
 - [AIR-URN](https://github.com/civitai/civitai/wiki/AIR-%E2%80%90-Uniform-Resource-Names-for-AI) project by [CivitAI](https://civitai.com/)
 - [Spandrel](https://github.com/chaiNNer-org/spandrel/blob/main/libs/spandrel/spandrel/__helpers/registry.py) library's super-resolution registry
@@ -172,76 +170,115 @@ Code for this project can be found at [darkshapes/MIR](https://github.com/darksh
 
 Like other URI schema, the order of the identifiers roughly indicates their specificity from left (broad) to right (narrow).
 
-#### Domains
+#### DOMAINS
 
-- `dev`: Varying local neural network layers, in-training, pre-release, items under evaluation, likely in unexpected formats  
-- `model`: Static local neural network layers. Publicly released machine learning models with an identifier in the database  
-- `operations`: Varying global neural network attributes, algorithms, optimizations and procedures on models  
-- `info`:  Static global neural network attributes, metadata with an identifier in the database  
+> ↑Most Specific/Decentralized
 
-#### Architecture
+###### Dev   
 
-Broad and general terms for system architectures:
-- `dit`: Diffusion transformer, typically Vision Synthesis
-- `unet`: Unet diffusion structure
-- `art`: Autoregressive transformer, typically LLMs
-- `lora`: Low-Rank Adapter (may work with dit or transformer)
-- `vae`: Variational Autoencoder
-- etc
-
-#### Series
-
-Foundational network and technique types.
-
-#### Compatibility
-
-Implementation details based on version-breaking changes, configuration inconsistencies, or other conflicting indicators that have practical application.
-
-### Notes
-
-For domains field in MIR:
-
-
-#### ↑Most Specific/Decentralized
-
-##### Dev   
-
-**Pre-release or under evaluation items without an identifier in an expected format**
+**Pre-release or under evaluation items without an identifier in an expected format**  
 Anything in in-training, pre-public release, and items under evaluation
 
 Meant to be created by anyone, derived from code and file analysis
+
 - Contextual
 - Layers of neural networks
 - Dynamic
 
-##### Model
+###### Model
 
-**Publicly released machine learning models with an identifier in the database**
+**Publicly released machine learning models with an identifier in the database**  
 Model weight tensors with arbitrary locations and quantitative dimensions
 
 Meant to be created by file hosts, derived from research pre-prints
+
 - Contextual
 - Layers of neural networks
 - Fixed
 
-##### Ops
+###### Ops
 
-**References to specific optimization or manipulation techniques**
+**References to specific optimization or manipulation techniques**  
 Algorithms, optimizations and procedures for models
 
 Meant to be created by code libraries, derived from research pre-prints
+
 - Universal
 - Attributes of neural networks
 - Dynamic
 
-##### Info  
+###### Info  
 
-**Metadata of layer names or settings with an identifier in the database**
+**Metadata of layer names or settings with an identifier in the database**  
 Information about the model and tensor specifications
 
 Meant to be created by standards community, derived from code and file analysis
+
 - Universal
 - Attributes of neural networks
 - Fixed
 
-#### ↓Most General/Centralized
+> ↓Most General/Centralized
+
+#### ARCHITECTURE
+
+Broad and general terms for system architectures:
+
+| Abbreviation    | Description                               |
+| --------------- | ----------------------------------------- |
+| GRU             | Gated recurrent unit                      |
+| RBM             | Restricted Boltzmann machine              |
+| TAE             | Tiny Autoencoder                          |
+| VAE             | Variable Autoencoder                      |
+| LSTM            | Long Short-Term Memory                    |
+| RESNET          | Residual Network                          |
+| CNN             | Convolutional Neural Network              |
+| RCNN            | Region-based Convolutional Neural Network |
+| RNN             | Recurrent Neural Network                  |
+| BRNN            | Bi-directional Recurrent Neural Network   |
+| GAN             | Generative Adversarial Model              |
+| SSM             | State-Space Model                         |
+| DETR            | Detection Transformer                     |
+| VIT             | Vision Transformer                        |
+| MOE             | Mixture of Experts                        |
+| AET             | Autoencoding Transformer                  |
+| STST            | Sequence-to-Sequence Transformer          |
+| ART             | Autoregressive Transformer                |
+| LORA            | Low-Rank Adaptation                       |
+| CONTROLNET      | Controlnet                                |
+| UNCLASSIFIED    | Unknown                                   |
+
+---
+
+#### SERIES
+
+Foundational network and technique types.
+
+
+##### Rules
+
+- Lowercase, hyphen only
+- Remove parameter size, non-breaking semantic versioning, library names
+
+Example: `tencent-hunyuan/hunyuandiT-v1.2-diffusers`<br />
+SERIES : `hunyuandit-v1`
+
+Example: `black-forest-labs/FLUX.1-dev`<br />
+SERIES : `flux1-dev`
+
+In regex (roughly):
+
+```
+BREAKING*SUFFIX = r".*(?:-)(prior)$|.*(?:-)(diffusers)$|.\*[\*-](\d{3,4}px|-T2V$|-I2V$)"
+PARAMETERS*SUFFIX = r"(\d{1,4}[KkMmBb]|[.*-]\d+[\._-]\d+[Bb][._-]).\*?$"
+SEARCH*SUFFIX = r"\d+[.*-]?\d+[BbMmKk](it)?|[._-]\d+[BbMmKk](it)?"
+```
+
+#### COMPATIBILITY
+
+Implementation details based on version-breaking changes, configuration inconsistencies, or other conflicting indicators that have practical application.
+
+
+##### Rules
+
+An additional SERIES label for identifying cross-compatibility
