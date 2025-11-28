@@ -3,7 +3,7 @@
 Based on specs defined by Darkshapes' [MIR](https://huggingface.co/darkshapes/MIR_) (Machine Intelligence Resource), a naming schema for AIGC/ML work, and Ollama's [Modelfile](https://ollama.readthedocs.io/en/modelfile/), the blueprint to create and share models:
 
 ```
-FROM /Users/unauthorized/Downloads/models/text/qwen2.5-7b-ita-finetune
+FROM /Users/you/Downloads/model.safetensors
 MIR          "info.stst.t5"                              # who am I?
 WEIGHTS      "./t5-small.safetensors" sha256="..."       # where are my weights?
 LAYOUT       "hf://.../weight_maps/....json"             # how are they packed?
