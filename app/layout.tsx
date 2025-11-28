@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { ReactNode } from 'react'
+import type React from 'react'
 import { Banner, Head } from 'nextra/components'
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { getPageMap } from 'nextra/page-map'
@@ -61,7 +61,7 @@ export const viewport: Viewport = {
   themeColor: '#A32026',
 }
 
-export default async function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const pageMap = await getPageMap()
 
   const navbar = (

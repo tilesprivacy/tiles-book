@@ -30,5 +30,11 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.0",
     "typescript": "^5.5.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "18.3.27",
+      "@types/react-dom": "18.3.7"
+    }
   }
 }
