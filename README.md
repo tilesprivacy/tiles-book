@@ -1,6 +1,6 @@
 # Tilekit
 
-Tilekit is a [Modelfile](https://ollama.readthedocs.io/en/modelfile/) based decentralized version control system for model weights.
+Tilekit is a [Modelfile](https://docs.ollama.com/modelfile) based decentralized version control system for model weights.
 
 ## Quick Start
 
