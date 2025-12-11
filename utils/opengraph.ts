@@ -34,9 +34,9 @@ export function generateOpenGraphData(
   // Extract title from frontmatter or use global default
   const rawTitle = frontmatter.ogTitle ||
     frontmatter.title ||
-    'Tilekit: Modelfile based SDK that lets developers customize open models and agent experiences.'
+    'Tilekit SDK Developer Preview'
   const rawDocumentTitle = frontmatter.title ||
-    'Modelfile based SDK that lets developers customize open models and agent experiences'
+    'Tilekit SDK Developer Preview'
   
   // Remove "nextra" from titles
   const title = removeNextra(rawTitle)
