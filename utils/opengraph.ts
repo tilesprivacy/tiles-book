@@ -55,7 +55,7 @@ export function generateOpenGraphData(
     (path?.includes('/blog/') ? 'article' : 'website')
   
   // Generate OG image URL
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tilekit.dev'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://book.tiles.run'
   const ogImageUrl = frontmatter.image || `${baseUrl}/og.png`
   
   return {
@@ -97,7 +97,7 @@ function extractDescription(content: string, maxLength: number = 160): string {
 }
 
 export function generateOpenGraphUrl(data: OpenGraphData): string {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tilekit.dev'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://book.tiles.run'
   const params = new URLSearchParams({
     title: data.title,
     description: data.description,

@@ -102,7 +102,7 @@ Edit `pages/api/og.tsx` to customize the image design:
 
 Set these environment variables to customize the implementation:
 
-- `NEXT_PUBLIC_BASE_URL`: Your site's base URL (default: "https://tilekit.dev")
+- `NEXT_PUBLIC_BASE_URL`: Your site's base URL (default: "https://book.tiles.run")
 
 ## Testing
 

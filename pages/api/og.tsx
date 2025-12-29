@@ -4,7 +4,7 @@ export const runtime = "edge"
 
 export default async function handler(request: Request) {
   // Fetch the dark.png image (the "T" logo)
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://tilekit.dev')
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://book.tiles.run')
   const imageResponse = await fetch(`${baseUrl}/dark.png`)
   const imageData = await imageResponse.arrayBuffer()
   const imageBase64 = Buffer.from(imageData).toString('base64')
