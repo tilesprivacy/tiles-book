@@ -6,7 +6,7 @@ const config: DocsThemeConfig = {
   logo: (
     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
       <Logo width={24} height={24} />
-      <span>Tilekit SDK</span>
+      <span>Tiles Book</span>
     </div>
   ),
   project: {
@@ -49,12 +49,12 @@ const config: DocsThemeConfig = {
   head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="keywords" content="Tilekit, Modelfile, Rust SDK, open models, AI models, model customization, agent experiences, Ollama, machine learning, LLM, fine-tuning" />
-      <meta name="author" content="Tilekit" />
+      <meta name="keywords" content="Tiles Book, Modelfile, Rust SDK, open models, AI models, model customization, agent experiences, Ollama, machine learning, LLM, fine-tuning" />
+      <meta name="author" content="Tiles Book" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="language" content="English" />
       <meta httpEquiv="content-language" content="en-US" />
-      <meta property="og:site_name" content="Tilekit" />
+      <meta property="og:site_name" content="Tiles Book" />
       <meta property="og:locale" content="en_US" />
       <meta name="twitter:site" content="@tileslauncher" />
       <meta name="twitter:creator" content="@tileslauncher" />
@@ -63,7 +63,7 @@ const config: DocsThemeConfig = {
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="shortcut icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <meta name="apple-mobile-web-app-title" content="Tilekit" />
+      <meta name="apple-mobile-web-app-title" content="Tiles Book" />
       <link rel="manifest" href="/site.webmanifest" />
     </>
   ),
@@ -71,7 +71,7 @@ const config: DocsThemeConfig = {
   useNextSeoProps() {
     return {
       titleTemplate: '%s',
-      defaultTitle: 'Tilekit SDK',
+      defaultTitle: 'Tiles Book',
     }
   },
 }
