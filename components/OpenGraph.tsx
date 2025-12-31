@@ -29,7 +29,7 @@ interface OpenGraphProps {
 }
 
 export function OpenGraph({
-  title = 'Tilekit SDK',
+  title = 'Tiles Book',
   documentTitle,
   description = "Tilekit is a Rust-based declarative, cross-platform Modelfile-based SDK that lets developers customize open models and agent experiences. Build, run, and share fine-tuned open models with ease.",
   type = 'website',
