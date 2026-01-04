@@ -12,11 +12,11 @@ export default async function handler(request: Request) {
   
   // Get query parameters if provided
   const { searchParams } = new URL(request.url)
-  const title = searchParams.get('title') || 'Modelfile based SDK that lets developers customize open models and agent experiences'
-  const description = searchParams.get('description') || 'Modelfile based SDK that lets developers customize open models and agent experiences'
+  const title = searchParams.get('title') || 'Learn about decentralized memory networks'
+  const description = searchParams.get('description') || 'Learn about decentralized memory networks'
   
   // Use description if provided, otherwise use title, fallback to default
-  const displayText = description || title || 'Modelfile based SDK that lets developers customize open models and agent experiences'
+  const displayText = description || title || 'Learn about decentralized memory networks'
   
   return new ImageResponse(
     <div

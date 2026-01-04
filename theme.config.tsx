@@ -71,7 +71,7 @@ const config: DocsThemeConfig = {
   useNextSeoProps() {
     return {
       titleTemplate: '%s',
-      defaultTitle: 'Tiles Book',
+      defaultTitle: 'Tiles Book: Learn about decentralized memory networks.',
     }
   },
 }

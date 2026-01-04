@@ -34,9 +34,9 @@ export function generateOpenGraphData(
   // Extract title from frontmatter or use global default
   const rawTitle = frontmatter.ogTitle ||
     frontmatter.title ||
-    'Tiles Book'
+    'Tiles Book: Learn about decentralized memory networks.'
   const rawDocumentTitle = frontmatter.title ||
-    'Tiles Book'
+    'Tiles Book: Learn about decentralized memory networks.'
   
   // Remove "nextra" from titles
   const title = removeNextra(rawTitle)
@@ -45,7 +45,7 @@ export function generateOpenGraphData(
   // Extract description from frontmatter or generate from content
   const rawDescription = frontmatter.description || 
     frontmatter.excerpt ||
-    (content ? extractDescription(content) : "Tilekit is a Rust-based declarative, cross-platform Modelfile-based SDK that lets developers customize open models and agent experiences. Build, run, and share fine-tuned open models with ease.")
+    (content ? extractDescription(content) : "Tiles book documents Tiles, the consumer offering, and Tilekit, the developer-facing, Rust-based Modelfile SDK.")
   
   // Remove "nextra" from description
   const description = removeNextra(rawDescription)
